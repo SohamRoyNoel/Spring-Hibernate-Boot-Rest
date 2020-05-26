@@ -1,0 +1,17 @@
+package com.noXML;
+
+public class SwimCoach implements Coach {
+
+	@Override
+	public String DailyWorkOuts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

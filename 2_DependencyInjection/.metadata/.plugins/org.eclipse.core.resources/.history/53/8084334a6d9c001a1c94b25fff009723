@@ -1,0 +1,44 @@
+package com.main.ioc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.main.depencency.*;
+
+@Component
+public class AnnotationCoach implements Coach {
+
+	private FortuneWisher fortuneWisher;
+	
+	/*
+	 * Checks all the classes who implements Fortune wisher
+	 * */
+	/*
+	 * 
+	 * Setter Injection
+	 * */
+	public AnnotationCoach() {}
+	/*
+	 * 
+	 * Constructor INJECTION
+	 * 
+	@Autowired
+	public AnnotationCoach(FortuneWisher fw) {
+		fortuneWisher = fw;
+	}*/
+
+	@Override
+	public String DailyWorkOuts() {
+		return "WorkOut Daily you fatty dumb";
+	}
+
+	public AnnotationCoach() {
+		super();
+	}
+
+	@Override
+	public String getFortune() {
+		return fortuneWisher.getFortune();
+	}
+
+}

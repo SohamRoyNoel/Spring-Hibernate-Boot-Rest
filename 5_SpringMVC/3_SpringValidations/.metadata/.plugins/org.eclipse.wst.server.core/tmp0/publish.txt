@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Tue May 26 00:38:26 IST 2020
+org.eclipse.jst.jee.server\:/binary\:D\:\\JavaWebServicesPractice\\Spring\\5_SpringMVC\\3_SpringValidations\\ValidatorDemo\\WebContent\\WEB-INF\\lib\\spring-web-5.2.6.RELEASE-sources.jar=WEB-INF/lib/spring-web-5.2.6.RELEASE-sources.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\JavaWebServicesPractice\\Spring\\5_SpringMVC\\3_SpringValidations\\ValidatorDemo\\WebContent\\WEB-INF\\lib\\spring-web-5.2.6.RELEASE.jar=WEB-INF/lib/spring-web-5.2.6.RELEASE.jar

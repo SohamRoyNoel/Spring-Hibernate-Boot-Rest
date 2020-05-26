@@ -1,0 +1,22 @@
+package com.noXML;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan("com.noXML")
+public class NoXMLConfiguration {
+	
+	// define bean for sad fortune services
+	@Bean
+	public FortuneWisher sadFortune() { // sad fortune is going to be the BEAN ID, will be assigned by SPRING
+		return new UnhappyFortuneWisher();
+	}
+	
+	// define bean for swim coach and inject dependency
+	@Bean
+	public Coach swimer() {
+		return new SwimCoach(sadFortune()); // Give reference of dependency use the same method name sadFortune() 
+	}
+}

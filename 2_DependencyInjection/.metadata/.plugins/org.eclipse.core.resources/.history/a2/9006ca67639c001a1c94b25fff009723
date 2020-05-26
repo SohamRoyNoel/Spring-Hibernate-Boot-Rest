@@ -1,0 +1,20 @@
+package ioc;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class AnnotationCoach implements Coach {
+
+	@Override
+	public String DailyWorkOuts() {
+		// TODO Auto-generated method stub
+		return "WorkOut Daily you fatty dumb";
+	}
+
+	@Override
+	public String getFortune() {
+		// TODO Auto-generated method stub
+		return "Duck your whole life";
+	}
+
+}

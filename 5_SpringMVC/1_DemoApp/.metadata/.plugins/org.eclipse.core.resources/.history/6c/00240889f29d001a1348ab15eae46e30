@@ -1,0 +1,19 @@
+package com.demos.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HomeController {
+
+	@RequestMapping("/getName")
+	public String getPage() {
+		return "main-menu";
+	}
+	
+	@RequestMapping("/showName")
+	public String showPage() {
+		return "show-menu";
+	}
+	
+}

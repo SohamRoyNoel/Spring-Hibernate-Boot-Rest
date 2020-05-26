@@ -1,0 +1,48 @@
+package com.models;
+
+import java.util.LinkedHashMap;
+
+public class Students {
+
+	String firstname;
+	String lastname;
+	
+	// Dropdown Element
+	String country;
+	
+	// Dynamic Dropdown : reading from MODEL
+	private LinkedHashMap<String, String> favPlayer;
+	
+	public Students() {
+		favPlayer.put("CR", "Ronaldo");
+		favPlayer.put("MS", "Messy");
+		favPlayer.put("NM", "Naimar");
+		favPlayer.put("LM", "Luka M");
+	}
+	public LinkedHashMap<String, String> getFavPlayer() {
+		return favPlayer;
+	}
+	
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	
+	public String getFirstname() {
+		return firstname;
+	}
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+	public String getLastname() {
+		return lastname;
+	}
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+	
+	
+	
+}

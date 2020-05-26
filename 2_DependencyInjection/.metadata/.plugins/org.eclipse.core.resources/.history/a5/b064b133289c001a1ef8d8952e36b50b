@@ -1,0 +1,28 @@
+package tinyProjectIPL;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import ioc.Coach;
+import tinyProjectIPL.dependency.Players;
+
+public class IPLApp {
+
+	public static void main(String[] args) {
+
+		// load configuration file
+		ClassPathXmlApplicationContext cp = new ClassPathXmlApplicationContext("applicationContext.xml");
+		// retrieve bean from container
+		Players cricketPlayer = cp.getBean("myIPLCricket", Players.class);
+		Players footballPlayer = cp.getBean("myISLFootball", Players.class);
+		// call method on bean
+		System.out.println("Cricket : "+cricketPlayer.);
+		System.out.println("Football : " + footballPlayer.);
+		// now Call the dependent method
+		System.out.println("Football : " + cricketPlayer.getFortune());
+		System.out.println("Baseball : " + footballPlayer.getFortune());
+		// close
+		cp.close();
+
+	}
+
+}

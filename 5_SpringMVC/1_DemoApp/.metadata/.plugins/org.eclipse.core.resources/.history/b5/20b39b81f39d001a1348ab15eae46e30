@@ -1,0 +1,6 @@
+<!Doctype html>
+<html>
+<body>
+hello ${parm.stnm}, You am a good boy
+</body>
+</html>

@@ -1,0 +1,18 @@
+package tinyProjectIPL.dependency;
+
+public class Cricketers implements Players {
+
+	private String email;
+	private String password;
+	
+	@Override
+	public String getEmail() {
+		return null;
+	}
+
+	@Override
+	public String getPassword() {
+		return null;
+	}
+
+}

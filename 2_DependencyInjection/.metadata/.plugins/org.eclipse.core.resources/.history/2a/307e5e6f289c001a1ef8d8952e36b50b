@@ -1,0 +1,38 @@
+package tinyProjectIPL;
+
+import tinyProjectIPL.dependency.Players;
+
+public class IPLCricket implements Players {
+
+	public Players ps;
+	public String pnm;
+	public String pem;
+
+	public IPLCricket() {}
+	
+	public void setCricketPlayer(Players p) {
+		this.ps = p;
+	}
+
+	@Override
+	public String PlayerDetails(String nm, String ps) {
+		this.pnm = nm;
+		this.pem = ps;
+		return "From Cricket player Details" + pnm + " " + pem;
+	}
+
+	@Override
+	public String getPlayerEmail() {
+		return this.pnm;
+	}
+
+	@Override
+	public String getPlayerPassword() {
+		return this.pem;
+	}
+
+	
+	
+	
+	
+}

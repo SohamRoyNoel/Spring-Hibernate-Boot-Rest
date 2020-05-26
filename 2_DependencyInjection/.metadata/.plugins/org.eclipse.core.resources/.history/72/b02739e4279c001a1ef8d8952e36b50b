@@ -1,0 +1,19 @@
+package tinyProjectIPL;
+
+import tinyProjectIPL.dependency.Players;
+
+public class ISLFootball implements Players {
+	
+	private Players ps;
+		
+	public ISLFootball() {}
+	
+	public void setFootballPlayer(Players p) {
+		this.ps = p;
+	}
+
+	
+	
+	
+
+}

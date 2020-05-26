@@ -1,0 +1,20 @@
+package tinyProjectIPL.dependency;
+
+public class Dependency implements Players {
+
+	@Override
+	public String PlayerDetails(String nm, String ps) {
+		return null;
+	}
+
+	@Override
+	public String getPlayerEmail() {
+		return null;
+	}
+
+	@Override
+	public String getPlayerPassword() {
+		return null;
+	}
+
+}

@@ -1,0 +1,10 @@
+package depencency;
+
+public class UnhappyWisher implements FortuneWisher {
+
+	@Override
+	public String getFortune() {
+		return "You've a Ducking Day";
+	}
+
+}

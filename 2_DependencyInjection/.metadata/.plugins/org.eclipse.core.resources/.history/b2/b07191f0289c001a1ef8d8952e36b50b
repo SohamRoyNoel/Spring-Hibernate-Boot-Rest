@@ -1,0 +1,23 @@
+package tinyProjectIPL.dependency;
+
+public class Dependency implements Players {
+
+	@Override
+	public String PlayerDetails(String nm, String ps) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getPlayerEmail() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getPlayerPassword() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

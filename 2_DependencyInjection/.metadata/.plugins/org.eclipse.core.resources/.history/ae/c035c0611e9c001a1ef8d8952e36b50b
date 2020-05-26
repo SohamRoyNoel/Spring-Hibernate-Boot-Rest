@@ -1,0 +1,23 @@
+package ioc;
+
+import depencency.FortuneWisher;
+
+public class BaseBallCoach implements Coach{
+	
+	// DEPENDENCY INJECTION - Setter INJECTION
+	private FortuneWisher fc;
+
+	@Override
+	public String DailyWorkOuts() {
+		return "Practice Ball ball Now";
+	}
+
+	@Override
+	public String getFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}

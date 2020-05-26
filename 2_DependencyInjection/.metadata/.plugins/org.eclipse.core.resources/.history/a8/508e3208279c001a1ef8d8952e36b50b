@@ -1,0 +1,12 @@
+package tinyProjectIPL.dependency;
+
+public interface Players {
+
+	public String getEmail(String em);
+	public String getPassword(String ps);
+	
+	// dependency
+	public String getPlayerEmail();
+	public String getPlayerPassword();
+	
+}

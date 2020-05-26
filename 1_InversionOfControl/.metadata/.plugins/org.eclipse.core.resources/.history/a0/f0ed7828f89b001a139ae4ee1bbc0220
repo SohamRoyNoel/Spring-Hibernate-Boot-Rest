@@ -1,0 +1,19 @@
+package ioc;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class iocMain {
+
+	public static void main(String[] args) {
+		
+		// load configuration file
+		ClassPathXmlApplicationContext cp = new ClassPathXmlApplicationContext("applicationContext.xml");
+		// retrive bean from container
+		
+		// call methoda on bean
+		
+		// close
+
+	}
+
+}

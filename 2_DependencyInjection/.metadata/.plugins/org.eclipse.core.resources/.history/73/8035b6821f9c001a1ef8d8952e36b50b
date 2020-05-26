@@ -1,0 +1,31 @@
+package ioc;
+
+import depencency.FortuneWisher;
+
+public class BaseBallCoach implements Coach{
+	
+	// DEPENDENCY INJECTION - Setter INJECTION
+	private FortuneWisher fc;
+	
+	public BaseBallCoach() {
+		super();
+	}
+	
+	public void setFortuneForFootball(FortuneWisher fortuneWisher) {
+		this.fc = fortuneWisher;
+	}
+
+	@Override
+	public String DailyWorkOuts() {
+		return "Practice Ball ball Now";
+	}
+
+	@Override
+	public String getFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}

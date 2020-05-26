@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- Define your beans here -->
+
+	<!-- Add a logger config to see logging messages. - For more detailed logs, 
+		set values to "FINEST" - For info on logging levels, see: http://www.vogella.com/tutorials/Logging/article.html -->
+	<bean id="myLoggerConfig"
+		class="ioc.MyLoggerConfig"
+		init-method="initLogger">
+		<property name="rootLoggerLevel" value="FINE" />
+		<property name="printedLoggerLevel" value="FINE" />
+	</bean>
+	
+	<!-- Dependency Injection -->
+	<bean id="myFortuneSrevices" class="depencency.HappyFortuneWisher" ></bean>
+	<bean id="myPlayerSetters" class="depencency.Cricketers" ></bean>
+
+	<!-- Inversion Of Control:  [id of Dependency injection is same in ref]-->
+	<!-- COnstructor Injection -->
+	<bean id="myCoach" class="ioc.FootballCoach">
+		<constructor-arg ref="myFortuneSrevices" />
+	</bean>
+	
+	<!-- Setter INJECTION : property name should be the setter name without "set"-->
+	<bean id="myCoachBaseball" class="ioc.BaseBallCoach">
+	<property name="FortuneForFootball" ref="myFortuneSrevices"></property>
+	</bean>
+	<bean id="myIPLCricket" class="tinyProjectIPL.IPLCricket">
+	<property name="CricketPlayer" ref="myFortuneSrevices"></property>
+	</bean>
+	<bean id="myISLFootball" class="tinyProjectIPL.ISLFootball">
+	<property name="FootballPlayer" ref="myFortuneSrevices"></property>
+	</bean>
+
+	
+	
+
+</beans>
+
+
+
+
+

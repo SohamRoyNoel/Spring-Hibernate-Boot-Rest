@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\JavaWebServicesPractice\Spring\5_SpringMVC\2_JSPTags\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+339864333.index
+1858977123.index
+2816983642.index
+769411290.index
+1231401538.index
+1660365760.index
+3732209127.index

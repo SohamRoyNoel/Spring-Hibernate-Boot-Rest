@@ -1,0 +1,10 @@
+package com.main.depencency;
+
+public class HappyWisher implements FortuneWisher {
+
+	@Override
+	public String getFortune() {
+		return "You look Ducking Good Boy";
+	}
+
+}

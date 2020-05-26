@@ -1,0 +1,30 @@
+package ioc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import depencency.FortuneWisher;
+
+@Component("AnnotationOfCoach")
+public class AnnotationCoach implements Coach {
+
+	private FortuneWisher fortuneWisher;
+	
+	@Autowired
+	public AnnotationCoach(FortuneWisher fortuneWisher) {
+		this.fortuneWisher = fortuneWisher;
+	}
+
+	@Override
+	public String DailyWorkOuts() {
+		// TODO Auto-generated method stub
+		return "WorkOut Daily you fatty dumb";
+	}
+
+	@Override
+	public String getFortune() {
+		// TODO Auto-generated method stub
+		return fortuneWisher.getFortune();
+	}
+
+}

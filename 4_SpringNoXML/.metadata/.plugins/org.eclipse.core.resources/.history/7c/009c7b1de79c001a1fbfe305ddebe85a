@@ -1,0 +1,15 @@
+package com.noXML;
+
+public class SwimCoach implements Coach {
+
+	@Override
+	public String DailyWorkOuts() {
+		return "Swim in the Ocean";
+	}
+
+	@Override
+	public String getFortune() {
+		return null;
+	}
+
+}

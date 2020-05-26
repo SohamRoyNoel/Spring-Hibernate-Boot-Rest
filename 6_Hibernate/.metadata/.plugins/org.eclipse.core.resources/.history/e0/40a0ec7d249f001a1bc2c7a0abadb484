@@ -1,0 +1,11 @@
+package com.jdbc.demo;
+
+public class UpdateDB {
+
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}

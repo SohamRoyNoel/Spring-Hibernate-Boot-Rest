@@ -1,0 +1,8 @@
+package com.noXML;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class NoXMLConfiguration {
+
+}

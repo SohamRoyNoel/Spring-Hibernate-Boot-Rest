@@ -1,0 +1,11 @@
+package com.demos.controllers;
+/*
+ * if there is multiple method with same @RequestMapping
+ * Then code will crash; by the conflict,
+ * so its always good to set some PARENT Level Request Mapping
+ * */
+public class AmbigiousMappingController {
+
+	
+	
+}

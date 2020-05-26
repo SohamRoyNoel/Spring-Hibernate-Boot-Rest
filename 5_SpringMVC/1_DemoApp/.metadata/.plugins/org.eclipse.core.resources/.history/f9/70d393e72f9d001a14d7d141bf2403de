@@ -1,0 +1,9 @@
+package com.demos.controllers;
+
+public class HomeController {
+
+	public String showPage() {
+		return null;
+	}
+	
+}

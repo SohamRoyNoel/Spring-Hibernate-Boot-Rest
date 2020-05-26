@@ -1,0 +1,11 @@
+package com.jdbc.demo;
+
+public class ReadFromDB {
+
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}

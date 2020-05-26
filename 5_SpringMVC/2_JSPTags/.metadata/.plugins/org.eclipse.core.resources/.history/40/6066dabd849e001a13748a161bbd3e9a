@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- Getter method is called from the model -->
+<form:form action="processForm" modelAttribute="students">
+First Name : <form:input path="firstname"/><br>
+Last Name : <form:input path="lastname"/><br>
+Select Country :
+<form:select path="country">
+
+	<form:option value="Brazil" label="Brazil"></form:option>
+	<form:option value="Germany" label="Germany"></form:option>
+	<form:option value="USA" label="USA"></form:option>
+	<form:option value="UAE" label="UAE"></form:option>
+	<form:option value="India" label="India"></form:option>
+
+</form:select>
+<input type="submit" value="Submit">
+</form:form>
+</body>
+</html>

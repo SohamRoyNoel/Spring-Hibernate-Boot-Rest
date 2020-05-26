@@ -1,0 +1,18 @@
+package tinyProjectIPL.dependency;
+
+public interface Cricketers {
+
+	private String email;
+	private String password;
+	
+	@Override
+	public String getEmail(String em) {
+		return this.email = em;
+	}
+
+	@Override
+	public String getPassword(String ps) {
+		return this.password = ps;
+	}
+
+}

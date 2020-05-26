@@ -1,0 +1,69 @@
+package ioc;
+
+import depencency.FortuneWisher;
+
+public class BaseBallCoach implements Coach{
+	
+	// DEPENDENCY INJECTION - Setter INJECTION
+	private FortuneWisher fc;
+	
+	/*
+	 * 
+	 * Literal : Reads the same NAME from the getter and setter in XML file ::
+	 *  BEHIND the scene is calls setEmail() and setPs() methods
+	 * 
+	 * */
+	// Spring Literal - passing value
+	private String email;
+	private String ps;
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		System.out.println("Baseball Setters : Email" + email);
+		this.email = email;
+	}
+
+	public String getPs() {
+		return ps;
+	}
+
+	public void setPs(String ps) {
+		System.out.println("Baseball Setters : Password");
+		this.ps = ps;
+	}
+	/*
+	 * 
+	 * 
+	 * 
+	 * */
+	public BaseBallCoach() {
+		super();
+	}
+	/* <property name="fortuneForFootball" ref="myFortuneSrevices"></property>
+	 *  
+	 *  Name = method name [spring takes set + <property name> : so setter name should be like setFortuneForFootball
+	 *  ref = indicates the MAIN BEAN id of DEPENDENCY INJECTION
+	 *  
+	 *  */
+	 
+	public void setFortuneForFootball(FortuneWisher fortuneWisher) {
+		this.fc = fortuneWisher;
+	}
+
+	@Override
+	public String DailyWorkOuts() {
+		return "Practice Ball ball Now";
+	}
+
+	@Override
+	public String getFortune() {
+		// TODO Auto-generated method stub
+		return "Play Baseball Well To impress Sizuka";
+	}
+
+	
+	
+}

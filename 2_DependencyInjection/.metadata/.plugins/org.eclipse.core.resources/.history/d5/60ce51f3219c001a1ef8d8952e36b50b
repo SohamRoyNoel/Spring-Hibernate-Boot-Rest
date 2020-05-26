@@ -1,0 +1,5 @@
+package tinyProjectIPL.dependency;
+
+public class Cricketers implements Players {
+
+}

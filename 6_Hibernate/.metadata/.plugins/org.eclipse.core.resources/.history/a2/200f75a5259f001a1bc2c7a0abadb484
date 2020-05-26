@@ -1,0 +1,11 @@
+package com.jdbc.demo;
+
+public class DeleteDB {
+
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}

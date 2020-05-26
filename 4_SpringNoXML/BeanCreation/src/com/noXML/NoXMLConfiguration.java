@@ -1,0 +1,34 @@
+package com.noXML;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+@Configuration
+@ComponentScan("com.noXML") // to Scan the logger file
+@PropertySource("classpath:sport.properties")
+public class NoXMLConfiguration {
+
+	// define bean for sad fortune services
+	@Bean
+	public FortuneWisher sadFortune() { // sad fortune is going to be the BEAN ID, will be assigned by SPRING
+		return new UnhappyFortuneWisher();
+	}
+	@Bean
+	public FortuneWisher HappyFortune() { // Happy fortune is going to be the BEAN ID, will be assigned by SPRING
+		return new HappyFortuneWisher();
+	}
+
+	// define bean for swim coach and inject dependency
+	@Bean
+	public Coach swimer() {
+		return new SwimCoach(sadFortune()); // Give reference of dependency use the same method name sadFortune() 
+	}
+
+	@Bean
+	public Coach swimer1() {
+		return new SwimCoach(HappyFortune()); // Give reference of dependency use the same method name HappyFortune() 
+	}
+}

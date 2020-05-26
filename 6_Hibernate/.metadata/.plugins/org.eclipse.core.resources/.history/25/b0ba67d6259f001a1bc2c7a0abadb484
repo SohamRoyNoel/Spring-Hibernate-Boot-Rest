@@ -1,0 +1,11 @@
+package com.jdbc.demo;
+
+public class DeleteDBall {
+
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}

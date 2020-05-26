@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+D:\JavaWebServicesPractice\Spring\5_SpringMVC\3_SpringValidations\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3164632755.index
+\ValidatorDemo\src

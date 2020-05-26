@@ -1,0 +1,22 @@
+package com.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+/*
+ * 
+ * USING MODEL ATTRIBUTE
+ * 
+ * */
+@Controller
+@RequestMapping("/student")
+public class StudentController {
+
+	@RequestMapping("/show")
+	public String showForm(Model theStudentModel) {
+		
+		
+		return "show-form";
+	}
+	
+}

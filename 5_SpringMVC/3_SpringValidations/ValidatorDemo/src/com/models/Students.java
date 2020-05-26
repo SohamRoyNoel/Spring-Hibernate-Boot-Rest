@@ -1,0 +1,55 @@
+package com.models;
+
+import java.util.LinkedHashMap;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+
+public class Students {
+
+	
+	String firstname;
+	
+	@NotNull
+	@Size(min=10, message = "Can not be empty")
+	String lastname;
+
+	@Max(value=20, message="You can not get more then 20")
+	@Min(value=5, message="you cant not appear if you got any less than 5")
+	String credit;
+	
+	@Pattern(regexp="^[a-zA-z0-9]{5}", message="Can not be less then 5")
+	String pincode;
+	
+	public String getPincode() {
+		return pincode;
+	}
+	public void setPincode(String pincode) {
+		this.pincode = pincode;
+	}
+	// Input Box
+	public String getFirstname() {
+		return firstname;
+	}
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+	public String getLastname() {
+		return lastname;
+	}
+	public void setLastname(String lastname) {
+		this.lastname = lastname.trim();
+	}
+	
+	public String getCredit() {
+		return credit;
+	}
+	public void setCredit(String credit) {
+		this.credit = credit;
+	}
+	
+}

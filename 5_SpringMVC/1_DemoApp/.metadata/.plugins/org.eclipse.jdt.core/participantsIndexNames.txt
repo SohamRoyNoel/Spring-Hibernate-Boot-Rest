@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+D:\JavaWebServicesPractice\Spring\5_SpringMVC\1_DemoApp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2631455385.index
+\ConfigurationDemo\src

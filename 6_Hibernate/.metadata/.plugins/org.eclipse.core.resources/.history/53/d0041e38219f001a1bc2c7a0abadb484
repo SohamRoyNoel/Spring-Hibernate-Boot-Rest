@@ -1,0 +1,45 @@
+package com.jdbc.demo;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.jdbc.models.Students;
+
+public class ReadFromDBSingle {
+
+	public static void main(String[] args) {
+
+		// create session factory
+		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Students.class).buildSessionFactory();
+
+		// create session
+		Session session = factory.getCurrentSession();
+
+		try {			
+
+			// start a transaction
+			session.beginTransaction();
+
+			// query students
+			List<Students> theStudents = session.createQuery("from Students").list();
+
+			// display the students
+			displayStudents(theStudents);
+
+		}
+		finally {
+			factory.close();
+		}
+
+	}
+
+	private static void displayStudents(List<Students> theStudents) {
+		for (Students tempStudent : theStudents) {
+			System.out.println(tempStudent);
+		}
+	}
+
+}

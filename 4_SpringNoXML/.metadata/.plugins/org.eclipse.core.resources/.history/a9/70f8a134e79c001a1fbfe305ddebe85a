@@ -1,0 +1,21 @@
+package com.noXML;
+
+public class SwimCoach implements Coach {
+
+	private FortuneWisher fortuneWisher;
+		
+	public SwimCoach(FortuneWisher fw) {
+		this.fortuneWisher = fw;
+	}
+
+	@Override
+	public String DailyWorkOuts() {
+		return "Swim in the Ocean";
+	}
+
+	@Override
+	public String getFortune() {
+		return null;
+	}
+
+}
