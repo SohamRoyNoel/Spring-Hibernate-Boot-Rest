@@ -11,25 +11,25 @@ public class DeleteDBall {
 	public static void main(String[] args) {
 
 		// create session factory
-				SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Students.class).buildSessionFactory();
+		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Students.class).buildSessionFactory();
 
-				// create session
-				Session session = factory.getCurrentSession();
+		// create session
+		Session session = factory.getCurrentSession();
 
-				try {		
-					// start a transaction
-					session.beginTransaction();
+		try {		
+			// start a transaction
+			session.beginTransaction();
 
-					// query students
-					session.createQuery("delete from Students").executeUpdate();
-					
-					session.getTransaction().commit();
-					
-				}
-				finally {
-					factory.close();
-				}
-		
+			// query students
+			session.createQuery("delete from Students").executeUpdate();
+
+			session.getTransaction().commit();
+
+		}
+		finally {
+			factory.close();
+		}
+
 	}
 
 }
