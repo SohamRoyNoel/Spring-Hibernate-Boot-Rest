@@ -4,24 +4,17 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.jdbc.models.InstructorDetails;
-import com.jdbc.models.One2Many_Course;
-import com.jdbc.models.One2Many_Instructor;
+import com.jdbc.models.Course;
+import com.jdbc.models.Student;
 
-/*
- * 
- * Delete Course without deleting the Instructor
- * 
- * */
 public class DeleteCourse {
 
 	public static void main(String[] args) {
-		
+
 		// build session factory
 		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
-				.addAnnotatedClass(One2Many_Instructor.class)
-				.addAnnotatedClass(InstructorDetails.class)
-				.addAnnotatedClass(One2Many_Course.class)
+				.addAnnotatedClass(Course.class)
+				.addAnnotatedClass(Student.class)
 				.buildSessionFactory();
 
 		// create session
@@ -31,12 +24,15 @@ public class DeleteCourse {
 
 			// start a transaction
 			session.beginTransaction();
-			
-			int deletableCourseId = 1;
-			// get the Course from value by ID
-			One2Many_Course delCourse = session.get(One2Many_Course.class, deletableCourseId);		
 
-			session.delete(delCourse);
+			// Retrive
+			int deletableid = 1;
+			Student retriveStudent = session.get(Student.class, deletableid);
+			
+			session.delete(retriveStudent);
+			
+
+
 			// commit transaction
 			session.getTransaction().commit();
 

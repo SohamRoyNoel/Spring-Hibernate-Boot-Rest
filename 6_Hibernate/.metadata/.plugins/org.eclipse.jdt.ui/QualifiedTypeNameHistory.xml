@@ -12,7 +12,6 @@
 <fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
 <fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
 <fullyQualifiedTypeName name="org.hibernate.Session"/>
-<fullyQualifiedTypeName name="javax.persistence.FetchType"/>
 <fullyQualifiedTypeName name="org.hibernate.query.Query"/>
 <fullyQualifiedTypeName name="com.jdbc.models.InstructorDetails"/>
 <fullyQualifiedTypeName name="com.jdbc.models.One2Many_Instructor"/>
@@ -24,11 +23,12 @@
 <fullyQualifiedTypeName name="javax.persistence.Column"/>
 <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
 <fullyQualifiedTypeName name="com.jdbc.demo.Many2Many_Insertion"/>
-<fullyQualifiedTypeName name="com.jdbc.models.One2Many_Course"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="com.jdbc.models.Many2Many_Review"/>
 <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
 <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
+<fullyQualifiedTypeName name="javax.persistence.FetchType"/>
+<fullyQualifiedTypeName name="com.jdbc.models.One2Many_Course"/>
+<fullyQualifiedTypeName name="com.jdbc.models.Many2Many_Review"/>
 </qualifiedTypeNameHistroy>
