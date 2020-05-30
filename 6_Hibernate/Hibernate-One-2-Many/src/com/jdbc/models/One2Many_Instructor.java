@@ -41,7 +41,7 @@ public class One2Many_Instructor {
 	 * */
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "instructor_detail_id") /*****/
-	private InstructorDetails instructor_detail_id;
+	private One2One_InstructorDetails instructor_detail_id;
 	
 	
 	
@@ -102,11 +102,11 @@ public class One2Many_Instructor {
 		this.email = email;
 	}
 
-	public InstructorDetails getInstructor_detail_id() {
+	public One2One_InstructorDetails getInstructor_detail_id() {
 		return instructor_detail_id;
 	}
 
-	public void setInstructor_detail_id(InstructorDetails instructor_detail_id) {
+	public void setInstructor_detail_id(One2One_InstructorDetails instructor_detail_id) {
 		this.instructor_detail_id = instructor_detail_id;
 	}
 	

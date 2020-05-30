@@ -4,9 +4,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.jdbc.models.InstructorDetails;
 import com.jdbc.models.One2Many_Course;
 import com.jdbc.models.One2Many_Instructor;
+import com.jdbc.models.One2One_InstructorDetails;
 
 /*
  * 
@@ -20,7 +20,7 @@ public class DeleteCourse {
 		// build session factory
 		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
 				.addAnnotatedClass(One2Many_Instructor.class)
-				.addAnnotatedClass(InstructorDetails.class)
+				.addAnnotatedClass(One2One_InstructorDetails.class)
 				.addAnnotatedClass(One2Many_Course.class)
 				.buildSessionFactory();
 
