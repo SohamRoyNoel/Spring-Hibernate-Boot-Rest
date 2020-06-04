@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.springMVC.hibernate.dao.CustomerDAO;
 import com.springMVC.hibernate.models.Customer;
@@ -57,6 +58,25 @@ public class CustomerController {
 		customerService.SaveCustomer(customer);
 		
 		return "redirect:/customer/list";
+	}
+	
+	@GetMapping("/showFormUpdate")
+	public String showFormUpdate(@RequestParam("customerId") int uid, Model model) {
+		// Get Customer from Service
+		Customer theCustomer = customerService.getCustomer(uid);
+		
+		// Set customer as a modal attribute to pre populate data
+		/*
+		 * This should always be the same :::>
+		 * <form:form action="saveCustomer" modelAttribute="addCustomer" method="POST"> on customaer-add.jsp page
+		 * 
+		 * this way it will pre populate data on basis of the path
+		 * 
+		 * */
+		model.addAttribute("addCustomer", theCustomer);
+		
+		// send to Form
+		return "customaer-add";
 	}
 
 }

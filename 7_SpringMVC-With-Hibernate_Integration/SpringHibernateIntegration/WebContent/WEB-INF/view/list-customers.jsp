@@ -23,15 +23,24 @@ See All Customers Here
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
         <c:forEach var="t" items="${customers }">
+        <!-- Loop over and assign an ID to each UPDATE url 
+        	Pick that "customerId"
+        	@RequestParam("customerId") on controller
+        -->
+        <c:url var="updateLink" value="/customer/showFormUpdate">
+        	<c:param name="customerId" value="${t.id }"></c:param>
+        </c:url>
             <tr>
                 <td>${t.id }</td>
                 <td>${t.firstName }</td>
                 <td>${t.lastName }</td>
                 <td>${t.email }</td>
+                <td><a href="${updateLink }">Update</a></td>
             </tr>
          </c:forEach>
         </tbody>

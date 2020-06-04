@@ -13,6 +13,8 @@
 <body>
 
 <form:form action="saveCustomer" modelAttribute="addCustomer" method="POST">
+<!-- While update, we need this to rack the id -->
+<form:hidden path="id"/>
 <div class="form-group">
     <label for="exampleInputEmail1">First Name</label>
     <form:input class="form-control" path="firstName"/>

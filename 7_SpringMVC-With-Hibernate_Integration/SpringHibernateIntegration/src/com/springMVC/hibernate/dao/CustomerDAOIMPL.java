@@ -39,10 +39,27 @@ public class CustomerDAOIMPL implements CustomerDAO {
 
 	@Override
 	public void saveCustomer(Customer customer) {
-
 		Session currentSreesion = sessionFactory.getCurrentSession();
-		currentSreesion.save(customer);
+		/*
+		 * To INSERT A FIELD
+		 * */
+		// currentSreesion.save(customer);
+		/*
+		 * In case of update we use saveOrUpdate
+		 * 
+		 * Behind the scene hibernate determines; if it has ID, then UPDATE else INSERT
+		 * 
+		 * */
+		currentSreesion.saveOrUpdate(customer);
+	}
+
+	@Override
+	public Customer getCustomers(int uid) {
+
+		Session currentSession = sessionFactory.getCurrentSession();
+		Customer customer = currentSession.get(Customer.class, uid);
 		
+		return customer;
 	}
 
 }
