@@ -27,4 +27,11 @@ public class CustomerServiceIMPL implements CustomerService {
 		return customerDAO.getCustomers();
 	}
 
+
+	@Override
+	@Transactional
+	public void SaveCustomer(Customer customer) {
+		customerDAO.saveCustomer(customer);
+	}
+
 }

@@ -44,5 +44,8 @@ See All Customers Here
             </tr>
         </tfoot>
     </table>
+    
+    <h1>Add Customer To The List</h1>
+    <input type="button" onclick="window.location.href='showFormToAddCustomer'; return false;" value="ADD Customers">
 </body>
 </html>
