@@ -35,12 +35,19 @@ See All Customers Here
         <c:url var="updateLink" value="/customer/showFormUpdate">
         	<c:param name="customerId" value="${t.id }"></c:param>
         </c:url>
+        <!-- Loop over and assign an ID to each UPDATE url 
+        	Pick that "customerId"
+        	@RequestParam("customerId") on controller
+        -->
+        <c:url var="deleteLink" value="/customer/deleteOne">
+        	<c:param name="customerIds" value="${t.id }"></c:param>
+        </c:url>
             <tr>
                 <td>${t.id }</td>
                 <td>${t.firstName }</td>
                 <td>${t.lastName }</td>
                 <td>${t.email }</td>
-                <td><a href="${updateLink }">Update</a></td>
+                <td><a href="${updateLink }">Update</a> | <a onClick="if (!(confirm('Are you wanna delete?'))) { return false; }" href="${deleteLink }">Delete</a></td>
             </tr>
          </c:forEach>
         </tbody>
@@ -50,6 +57,7 @@ See All Customers Here
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
+                <th>Options</th>
             </tr>
         </tfoot>
     </table>

@@ -42,4 +42,11 @@ public class CustomerServiceIMPL implements CustomerService {
 		return customerDAO.getCustomers(uid);
 	}
 
+
+	@Override
+	@Transactional
+	public void delCustomer(int uid) {
+		customerDAO.deleteCustomers(uid);
+	}
+
 }

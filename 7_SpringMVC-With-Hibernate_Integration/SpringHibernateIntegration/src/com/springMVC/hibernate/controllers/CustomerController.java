@@ -78,5 +78,14 @@ public class CustomerController {
 		// send to Form
 		return "customaer-add";
 	}
+	
+	@GetMapping("/deleteOne")
+	public String deleteOne(@RequestParam("customerIds") int uid, Model model) {
+		// Get Customer from Service
+		customerService.delCustomer(uid);
+		
+		// send to Form
+		return "redirect:/customer/list";
+	}
 
 }
