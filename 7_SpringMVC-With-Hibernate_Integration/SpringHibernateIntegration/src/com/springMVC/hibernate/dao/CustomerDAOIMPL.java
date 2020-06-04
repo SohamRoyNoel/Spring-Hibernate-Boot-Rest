@@ -24,7 +24,7 @@ public class CustomerDAOIMPL implements CustomerDAO {
 	private SessionFactory sessionFactory;
 	
 	@Override
-	@Transactional // hibernate manages sessions automatically
+	//@Transactional // hibernate manages sessions automatically ==============>When Using SERVICE
 	public List<Customer> getCustomers() {
 		
 		// get current Hibernate Session
