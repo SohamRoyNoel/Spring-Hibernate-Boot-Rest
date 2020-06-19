@@ -1,9 +1,0 @@
-package com.jdbc.demo;
-
-public class CreateStudentDemo {
-
-	public static void main(String[] args) {
-		
-	}
-	
-}
