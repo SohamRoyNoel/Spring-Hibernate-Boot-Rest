@@ -15,4 +15,6 @@ public interface EmployeeService {
 	
 	void deleteuser(int id);
 	
+	Employee getEmployeeByName(String emp);
+	
 }

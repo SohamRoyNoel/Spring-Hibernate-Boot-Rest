@@ -16,5 +16,7 @@ public interface DesignationService {
 	Designation addDesignation(Designation degs);
 
 	//void deleteuser(int id);
+	
+	
 
 }

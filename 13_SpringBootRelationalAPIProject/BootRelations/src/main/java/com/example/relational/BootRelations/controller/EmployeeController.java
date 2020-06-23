@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.relational.BootRelations.models.Employee;
@@ -39,6 +40,18 @@ public class EmployeeController {
 		
 		if (theEmployee == null) {
 			throw new RuntimeException("Employee id not found - " + employeeId);
+		}
+		
+		return theEmployee;
+	}
+	
+	@GetMapping("/employees/{employeeId}")
+	public Employee getEmployeeBYName(@PathVariable("employeeId") String employeeId) {
+		
+		Employee theEmployee = employeeService.getEmployeeByName(employeeId);
+		
+		if (theEmployee == null) {
+			throw new RuntimeException("Employee Name not found - " + employeeId);
 		}
 		
 		return theEmployee;
